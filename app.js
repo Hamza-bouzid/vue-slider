@@ -67,10 +67,10 @@ let app = new Vue({
       setInterval(this.downImage, 3000);
     },
 
-    stopAutoplay: function() {
+    stopAutoplay: function () {
       clearInterval(this.autoplay);
-      console.log('ciao')
-    }
+      console.log("ciao");
+    },
   },
   created: function () {
     this.autoplay();
