@@ -30,6 +30,7 @@ let app = new Vue({
     ],
 
     active: 0,
+    check: 0,
   },
 
   methods: {
@@ -64,12 +65,11 @@ let app = new Vue({
     },
 
     autoplay: function () {
-      setInterval(this.downImage, 3000);
+      this.check = setInterval(this.downImage, 3000);
     },
 
     stopAutoplay: function () {
-      clearInterval(this.autoplay);
-      console.log("ciao");
+      clearInterval(this.check);
     },
   },
   created: function () {

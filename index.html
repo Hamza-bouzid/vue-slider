@@ -11,8 +11,8 @@
   <body>
     <div id="app">
       <div class="container">
-        <div class="slides">
-          <div class="full-slide" @mouseover="stopAutoplay">
+        <div class="slides" @mouseover="stopAutoplay" @mouseleave="autoplay">
+          <div class="full-slide">
             <div v-for="(element, indice) in list" class="full-slide-item" :class="isActive(indice, 'full-active')">
               <img :src="element.image" />
               <div class="text">
